@@ -1,0 +1,10 @@
+#!/bin/bash
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+sudo yum -y install httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+setenforce 0
+curl https://github.com/HKcyberstark/elastic-metasploit-workshop/blob/master/index.html > index.html
+sudo mv /home/centos index.html /var/www/html/index.html
+curl https://github.com/HKcyberstark/elastic-metasploit-workshop/blob/master/msfvenom-payload.sh > msfvenom-paylod.sh
+curl https://github.com/HKcyberstark/elastic-metasploit-workshop/blob/master/listener-script.rc > listener-script.rc
