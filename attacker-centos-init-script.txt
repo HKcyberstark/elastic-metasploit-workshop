@@ -4,7 +4,8 @@ sudo yum -y install httpd
 sudo systemctl start httpd
 sudo systemctl enable httpd
 setenforce 0
-curl https://github.com/HKcyberstark/elastic-metasploit-workshop/blob/master/index.html > index.html
-sudo mv /home/centos index.html /var/www/html/index.html
-curl https://github.com/HKcyberstark/elastic-metasploit-workshop/blob/master/msfvenom-payload.sh > msfvenom-paylod.sh
-curl https://github.com/HKcyberstark/elastic-metasploit-workshop/blob/master/listener-script.rc > listener-script.rc
+curl https://raw.githubusercontent.com/HKcyberstark/elastic-metasploit-workshop/master/index.html > /home/centos/index.html
+sudo mv /home/centos/index.html /var/www/html/index.html
+curl https://raw.githubusercontent.com/HKcyberstark/elastic-metasploit-workshop/master/msfvenom-payload.sh > /home/centos/payload.sh
+sudo chmod 755 /home/centos/payload.sh
+curl https://raw.githubusercontent.com/HKcyberstark/elastic-metasploit-workshop/master/listener-script.rc > /home/centos/listener-script.rc
