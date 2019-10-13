@@ -1,0 +1,13 @@
+<powershell>
+    $SrcUri = "https://raw.githubusercontent.com/HKcyberstark/elastic-metasploit-workshop/master/"
+    $HomeDir = "C:\Users\Administrator\Elastic\"
+    New-Item -Path $HomeDir -Type directory
+    $Command = "Set-MpPreference -DisableRealtimeMonitoring $true"
+
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    Set-MpPreference -DisableRealtimeMonitoring $true
+    Invoke-WebRequest -Uri "$SrcUri/beats-install.ps1" -OutFile "$HomeDir\beats-install.ps1"
+    Invoke-WebRequest -Uri "$SrcUri/sysmon-install.ps1" -OutFile "$HomeDir\sysmon-install.ps1"
+    Invoke-Expression $Command
+</powershell>
+<persist>true</persist>
