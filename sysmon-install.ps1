@@ -1,7 +1,7 @@
 $SysmonURI = "https://download.sysinternals.com/files/Sysmon.zip"
 $TempFolder = "C:\sysmon-temp"
 $LocalFilePath = "$TempFolder\sysmon.zip"
-$SysmonConfigFileURI = "https://raw.githubusercontent.com/olafhartong/sysmon-configs/master/sysmonconfig-v10.xml"
+$SysmonConfigFileURI = "https://raw.githubusercontent.com/olafhartong/sysmon-modular/master/sysmonconfig.xml"
 $LocalRulesFilePath = "C:\Windows\sysmon.xml"
 
 if (Test-Path "C:\Windows\Sysmon64.exe")
