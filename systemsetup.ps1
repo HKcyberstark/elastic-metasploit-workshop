@@ -10,6 +10,6 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 
 Invoke-WebRequest -Uri "$NoteplusUri" -OutFile "$HomeDir\notepadplus.exe"
 Invoke-WebRequest -Uri "$WinUri" -OutFile "$HomeDir\winlogbeat.zip"
-Expand-Archive -Path $HomeDir\winlogbeat.zip -DestinationPath $HomeDir\winlogbeat
+Expand-Archive -Path $HomeDir\winlogbeat.zip -DestinationPath $HomeDir"
 Invoke-WebRequest -Uri "$SrcUri/sysmon-install.ps1" -OutFile "$HomeDir\sysmon-install.ps1"
 Invoke-WebRequest -Uri "$SrcUri/apt34.ps1" -OutFile "$HomeDir\apt34.ps1"
